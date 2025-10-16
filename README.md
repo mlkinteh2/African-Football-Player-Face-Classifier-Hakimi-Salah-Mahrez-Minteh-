@@ -64,9 +64,7 @@ Users interact with a simple web interface built using **HTML, CSS, and JavaScri
 
 ---
 
-## 🗂️ Project Structure
 
----
 
 ## 🚀 How to Run the Project
 
