@@ -1,14 +1,10 @@
+<img width="1689" height="871" alt="image" src="https://github.com/user-attachments/assets/0fa77dc7-df3d-4509-970e-f853a7a73a98" />
+
 # African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh-
 This project is a machine learning–based image classification system that identifies African football players from face images. It uses computer vision (OpenCV) for face detection, wavelet transforms for feature extraction, and a Support Vector Machine (SVM) classifier for prediction.
 The entire system is integrated into a Streamlit web application, where users can upload a photo and get the predicted player name.
 
 
-# ⚽ African Football Player Face Classifier (Flask Web App)
-
-A Flask-based web application that recognizes African football players from their facial images using **Machine Learning** and **Computer Vision**.  
-The app uses **OpenCV**, **Wavelet Transform**, and a **Support Vector Machine (SVM)** model to classify uploaded images of players.
-
----
 
 ## Overview
 
@@ -59,6 +55,6 @@ Users interact with a simple web interface built using **HTML, CSS, and JavaScri
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/African-Football-Player-Classifier.git
-cd African-Football-Player-Classifier
+git clone https://github.com/mlkinteh2/African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh.git
+cd African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh
 
