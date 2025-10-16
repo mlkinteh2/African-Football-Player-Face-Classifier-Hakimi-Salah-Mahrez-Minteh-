@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>African Player Classifier</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <h1>African Football Player Classifier</h1>
+        <p class="subtitle">Upload a photo and the model will predict which player it is — fast, offline-friendly demo.</p>
+      </header>
+
+      <!-- Avatars row (4 players only) -->
+      <section class="avatars">
+        <div class="avatar">
+          <img src="../Model/Dataset/achraf_hakimi/Image_3.jpg" alt="Achraf Hakimi"/>
+          <div class="name">Achraf Hakimi</div>
+        </div>
+        <div class="avatar">
+          <img src="../Model/Dataset/Mohamed Salah/Image_1.jpg" alt="Mohamed Salah"/>
+          <div class="name">Mohamed Salah</div>
+        </div>
+        <div class="avatar">
+          <img src="../Model/Dataset/Riyad Mahrez/Image_11.jpg" alt="Riyad Mahrez"/>
+          <div class="name">Riyad Mahrez</div>
+        </div>
+        <div class="avatar">
+          <img src="../Model/Dataset/Yankuba Minteh/Image_1.jpg" alt="Yankuba Minteh"/>
+          <div class="name">Yankuba Minteh</div>
+        </div>
+      </section>
+
+      <!-- Main interactive area -->
+      <section class="main-grid">
+        <div class="upload-card">
+          <label class="file-drop" for="file-input">
+            <div class="drop-inner">
+              <div class="placeholder">Drop or select an image</div>
+              <div class="small-help">Supported: jpg, jpeg, png</div>
+            </div>
+            <input id="file-input" type="file" accept="image/*" />
+          </label>
+          <button id="predict-btn" class="btn-primary">Classify</button>
+        </div>
+
+        <div class="result-card">
+          <div id="preview" class="preview">
+            <div class="face-wrap">
+              <img id="face-img" class="face-img" src="" alt="Detected face will appear here" />
+            </div>
+            <div id="result" class="result">
+              <!-- JS will inject prediction and probabilities here -->
+            </div>
+          </div>
+        </div>
+
+        <aside class="prob-card">
+          <div class="prob-header">Probability Score</div>
+          <div id="prob-list" class="prob-list">
+            <!-- JS builds prob rows -->
+          </div>
+        </aside>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

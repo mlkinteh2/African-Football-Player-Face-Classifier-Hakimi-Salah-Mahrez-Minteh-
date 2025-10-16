@@ -1,0 +1,13 @@
+streamlit
+scikit-learn
+joblib
+numpy
+opencv-python
+pywavelets
+pillow
+requests
+flask
+flask-cors
+
+# Optional (if you use conda/venv):
+# - install these in a virtual environment to avoid system conflicts

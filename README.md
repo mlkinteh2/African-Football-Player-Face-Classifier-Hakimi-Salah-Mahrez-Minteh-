@@ -1,60 +1,30 @@
-<img width="1689" height="871" alt="image" src="https://github.com/user-attachments/assets/0fa77dc7-df3d-4509-970e-f853a7a73a98" />
+# African Player Classification
 
-# African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh-
-This project is a machine learning–based image classification system that identifies African football players from face images. It uses computer vision (OpenCV) for face detection, wavelet transforms for feature extraction, and a Support Vector Machine (SVM) classifier for prediction.
-The entire system is integrated into a Streamlit web application, where users can upload a photo and get the predicted player name.
+This project provides a Streamlit application that predicts which African football player appears in an uploaded photo.
 
+Quick steps to run locally (PowerShell on Windows):
 
+1. Create and activate a virtual environment (recommended):
 
-## Overview
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+```
 
-This project demonstrates the integration of **AI and Web Development**.  
-It automatically detects faces from uploaded images, extracts features using **Wavelet Transform**, and predicts the correct player using a pre-trained **SVM model**.  
+2. Install dependencies:
 
-Users interact with a simple web interface built using **HTML, CSS, and JavaScript**, while the backend is powered by **Python Flask**.
+```powershell
+python -m pip install -r requirements.txt
+```
 
----
+3. Run the Streamlit app:
 
-##  Players in the Dataset
+```powershell
+streamlit run app.py
+```
 
-| Player Name | Country |
-|--------------|----------|
-| Achraf Hakimi | 🇲🇦 Morocco |
-| Mohamed Salah | 🇪🇬 Egypt |
-| Riyad Mahrez | 🇩🇿 Algeria |
-| Yankuba Minteh | 🇬🇲 Gambia |
+Then open http://localhost:8501 in your browser.
 
-> *Note: The dataset was manually collected. Yankuba Minteh’s dataset was limited, so image augmentation techniques  were applied to increase the samples.*
-
----
-
-## Machine Learning Overview
-
-- **Face Detection:** Haar Cascade Classifier (OpenCV)  
-- **Feature Extraction:** Wavelet Transform (`pywt`) + raw pixel features  
-- **Model Used:** Support Vector Machine (SVM)  
-- **Framework:** scikit-learn  
-- **Accuracy:** ~90% (SVM performed best among tested models)
-
----
-
-## 📊 Model Performance
-
-| Model | Accuracy | Best Parameters |
-|--------|-----------|----------------|
-| 🧩 SVM | **0.90** | {'C': 1, 'kernel': 'linear'} |
-| 🌲 Random Forest | 0.72 | {'n_estimators': 10} |
-| 📈 Logistic Regression | 0.84 | {'C': 1} |
-
-**Confusion Matrix (SVM):**
-
-
----
-
-## 🚀 How to Run the Project
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/mlkinteh2/African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh.git
-cd African-Football-Player-Face-Classifier-Hakimi-Salah-Mahrez-Minteh
-
+Notes:
+- The trained model is at `Model/saved_model.pkl` and the class mapping is `Model/class_dictionary.json`.
+- Haar cascades are in `Model/opencv/haarcascades` and `app.py` loads them from there.
+- If unpickling fails with ModuleNotFoundError for `sklearn` or other libraries, ensure those packages are installed in your environment.
