@@ -2,108 +2,63 @@
 This project is a machine learning–based image classification system that identifies African football players from face images. It uses computer vision (OpenCV) for face detection, wavelet transforms for feature extraction, and a Support Vector Machine (SVM) classifier for prediction.
 The entire system is integrated into a Streamlit web application, where users can upload a photo and get the predicted player name.
 
-Dataset Preparation
 
-Dataset collected manually from Google Images for 4 players:
+# ⚽ African Football Player Face Classifier (Flask Web App)
 
-Achraf Hakimi
+A Flask-based web application that recognizes African football players from their facial images using **Machine Learning** and **Computer Vision**.  
+The app uses **OpenCV**, **Wavelet Transform**, and a **Support Vector Machine (SVM)** model to classify uploaded images of players.
 
-Mohamed Salah
+---
 
-Riyad Mahrez
+## Overview
 
-Yankuba Minteh
+This project demonstrates the integration of **AI and Web Development**.  
+It automatically detects faces from uploaded images, extracts features using **Wavelet Transform**, and predicts the correct player using a pre-trained **SVM model**.  
 
-Images are stored under:
-./Dataset/
-├── Achraf Hakimi/
-├── Mohamed Salah/
-├── Riyad Mahrez/
-└── Yankuba Minteh/
+Users interact with a simple web interface built using **HTML, CSS, and JavaScript**, while the backend is powered by **Python Flask**.
 
-Preprocessing & Feature Extraction
+---
 
-Face Detection:
+##  Players in the Dataset
 
-Used OpenCV’s haarcascade_frontalface_default.xml and haarcascade_eye.xml.
+| Player Name | Country |
+|--------------|----------|
+| Achraf Hakimi | 🇲🇦 Morocco |
+| Mohamed Salah | 🇪🇬 Egypt |
+| Riyad Mahrez | 🇩🇿 Algeria |
+| Yankuba Minteh | 🇬🇲 Gambia |
 
-Function get_cropped_image_if_2_eyes() ensures that only faces with both eyes visible are cropped and saved.
+> *Note: The dataset was manually collected. Yankuba Minteh’s dataset was limited, so image augmentation techniques  were applied to increase the samples.*
 
-Data Augmentation (especially for Yankuba Minteh):
+---
 
-Increased small dataset images using rotation, brightness change, and horizontal flipping.
+## Machine Learning Overview
 
-Helps balance the dataset and improve model generalization.
+- **Face Detection:** Haar Cascade Classifier (OpenCV)  
+- **Feature Extraction:** Wavelet Transform (`pywt`) + raw pixel features  
+- **Model Used:** Support Vector Machine (SVM)  
+- **Framework:** scikit-learn  
+- **Accuracy:** ~90% (SVM performed best among tested models)
 
-Wavelet Transform:
+---
 
-Applied discrete wavelet transform (pywt.dwt2) to extract texture-based features from face images.
+## 📊 Model Performance
 
-Combined wavelet and raw pixel features into a single feature vector for model training.
+| Model | Accuracy | Best Parameters |
+|--------|-----------|----------------|
+| 🧩 SVM | **0.90** | {'C': 1, 'kernel': 'linear'} |
+| 🌲 Random Forest | 0.72 | {'n_estimators': 10} |
+| 📈 Logistic Regression | 0.84 | {'C': 1} |
 
-🧩 Model Training
-
-Three models were tested:
-
-SVM (Support Vector Machine)
-
-Random Forest
-
-Logistic Regression
-
-Cross-validation and grid search were used for hyperparameter tuning.
-
-Best performing model:
-
-Model	Accuracy	Best Parameters
-SVM	0.90	{'C': 1, 'kernel': 'linear'}
-Logistic Regression	0.84	{'C': 1}
-Random Forest	0.72	{'n_estimators': 10}
-
-Web Application
-
-Built using Streamlit, the web app allows users to:
-
-Upload an image.
-
-Detect and crop the face.
-
-Display predicted player name.
-
-View class probabilities and confidence.
-
-Core technologies:
-
-OpenCV – Face detection
-
-PyWavelets – Feature extraction
-
-scikit-learn – Model training (SVM)
-
-python flask – Web deployment
+**Confusion Matrix (SVM):**
 
 
+---
 
-Results
+## 🚀 How to Run the Project
 
-Achieved ~90% accuracy using SVM.
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/African-Football-Player-Classifier.git
+cd African-Football-Player-Classifier
 
-Real-time face detection and classification works well for most test images.
-
-Limited data for Yankuba Minteh affects balance slightly, but augmentation improved performance.
-
-🏁 Future Improvements
-
-Collect more images, especially for underrepresented players.
-
-Use CNN (e.g., MobileNet or ResNet) for end-to-end feature learning.
-
-Add more African players to make the dataset more diverse.
-
-🙌 Acknowledgments
-
-Dataset collected manually by Modou [Your Full Name].
-
-Inspired by Grameen-style project approach (community-built dataset).
-
-Built as part of portfolio work for internship applications.
