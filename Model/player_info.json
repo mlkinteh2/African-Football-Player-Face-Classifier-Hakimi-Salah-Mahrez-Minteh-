@@ -1,0 +1,34 @@
+{
+  "achraf_hakimi": {
+    "full_name": "Achraf Hakimi",
+    "position": "Right-back / Wing-back",
+    "club": "Paris Saint-Germain",
+    "country": "Morocco",
+    "bio": "Fast, attack-minded full-back known for overlapping runs and excellent crossing.",
+    "image": "Model/Dataset/achraf_hakimi/Image_3.jpg"
+  },
+  "Mohamed Salah": {
+    "full_name": "Mohamed Salah",
+    "position": "Winger / Forward",
+    "club": "Liverpool FC",
+    "country": "Egypt",
+    "bio": "Clinical goalscorer with excellent dribbling and pace on the right wing.",
+    "image": "Model/Dataset/Mohamed Salah/Image_1.jpg"
+  },
+  "Riyad Mahrez": {
+    "full_name": "Riyad Mahrez",
+    "position": "Winger",
+    "club": "Al-Ahli",
+    "country": "Algeria",
+    "bio": "Creative winger with a silky first touch and set-piece ability.",
+    "image": "Model/Dataset/Riyad Mahrez/Image_10.jpg"
+  },
+  "Yankuba Minteh": {
+    "full_name": "Yankuba Minteh",
+    "position": "Winger",
+    "club": "New Club",
+    "country": "Gambia",
+    "bio": "Young, quick winger with promising dribbling and attacking instincts.",
+    "image": "Model/Dataset/Yankuba Minteh/Image_1.jpg"
+  }
+}
